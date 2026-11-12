@@ -6,9 +6,12 @@ avec une vérité terrain voxel par voxel, directement au format **nnU-Net v2**
 
 ## Par où commencer (4 commandes, moins de 10 Go)
 
+> Toutes les commandes ci-dessous se lancent **depuis le dossier `src/`** du dépôt (`cd src`).
+> Pour entraîner le modèle ensuite sur Kaggle : [docs/08_entrainement_kaggle.md](../docs/08_entrainement_kaggle.md).
+
 ```bash
 # 0. Installer les dépendances (une seule fois)
-pip install -r requirements.txt
+pip install -r ../requirements.txt
 
 # 1. Télécharger 15 vrais 4DCT (15 patients différents de TCIA 4D-Lung, ~9,1 Go)
 python download_4dct.py --dataset 4d_lung --one-per-patient --max-gb 9.5 --out data
@@ -30,7 +33,7 @@ Ajouter `--dry-run` à l'étape 1 pour voir la sélection sans rien télécharge
 ## Installation
 
 ```bash
-pip install -r requirements.txt
+pip install -r ../requirements.txt
 ```
 
 ## Récupérer les données publiques
